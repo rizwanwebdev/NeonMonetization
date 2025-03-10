@@ -5,7 +5,7 @@
 
 
 <p align="center">
-  <img src="https://i.postimg.cc/5tvRHmXF/Neon-Monetization.png" alt="NeonMonetization Screenshot" width="auto">
+  <img src="https://github.com/rizwanwebdev/NeonMonetization/blob/main/static/images/Neon%20Monetization.png?raw=true" alt="NeonMonetization Screenshot" width="auto">
 </p>
 NeonMonetization is a web-based platform designed to provide monetization solutions for publishers and advertisers. It offers a streamlined and efficient way to manage ad revenue, track earnings, and optimize campaigns.
 
