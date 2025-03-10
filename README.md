@@ -22,7 +22,7 @@ NeonMonetization is a web-based platform designed to provide monetization soluti
 
 This project was built using the following technologies:
 
-* [![Python][Python]][Python-url]
+* [![Python][Python.org]][Python-url]
 * [![Django][Django]][Django-url]
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
 * [![SQLite][SQLite]][SQLite-url]
