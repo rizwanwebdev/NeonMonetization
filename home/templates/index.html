@@ -1,0 +1,399 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+  
+ <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="hero-title">
+          <span>Advertise,</span>
+          <span class="highlight">Monetize,</span>
+          <span>Get Results!</span>
+        </h1>
+        <p class="hero-description">
+          We are a performance-driven ad network providing our advertisers with highly converting solutions while for our publishers offer better monetizing of available assets.
+        </p>
+        <div class="hero-buttons">
+          <a href="#" class="btn btn-primary">Start with Neon Monetization</a>
+          <a href="#" class="btn btn-secondary">Learn More</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="dashboard-card">
+          <div class="card-header">
+            <h3>Campaign Performance</h3>
+            <span>Last 30 days</span>
+          </div>
+          <div class="chart">
+            <div class="bar-container">
+              <div class="bar" style="--heit: 60%"></div>
+              <div class="bar" style="--heit: 45%"></div>
+              <div class="bar" style="--heit: 75%"></div>
+              <div class="bar" style="--heit: 90%"></div>
+              <div class="bar" style="--heit: 60%"></div>
+              <div class="bar" style="--heit: 100%"></div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <div class="stats">
+              <span class="percentage">128%</span>
+              <span class="trend">+12.5% from last month</span>
+            </div>
+            <div class="badge">Growth</div>
+          </div>
+        </div>
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 20V10"></path>
+              <path d="M18 20V4"></path>
+              <path d="M6 20v-4"></path>
+            </svg>
+          </div>
+          <div class="stat-content">
+            <h3 class="stat-number"><span class="counter" data-target="4">0</span>B+</h3>
+            <p class="stat-label">Monthly Impressions</p>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+          </div>
+          <div class="stat-content">
+            <h3 class="stat-number"><span class="counter" data-target="50">0</span>K+</h3>
+            <p class="stat-label">Active Publishers</p>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+              <line x1="9" y1="9" x2="9.01" y2="9"></line>
+              <line x1="15" y1="9" x2="15.01" y2="9"></line>
+            </svg>
+          </div>
+          <div class="stat-content">
+            <h3 class="stat-number"><span class="counter" data-target="98">0</span>%</h3>
+            <p class="stat-label">Client Satisfaction</p>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+              <line x1="7" y1="7" x2="7.01" y2="7"></line>
+            </svg>
+          </div>
+          <div class="stat-content">
+            <h3 class="stat-number"><span class="counter" data-target="12">0</span>+</h3>
+            <p class="stat-label">Ad Formats</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Publishers Section -->
+  <section class="publishers-section" id="publishers">
+    <div class="container">
+      <div class="section-header">
+        <h2>Publishers</h2>
+        <p>Earn more from your traffic with high-paying ads and seamless monetization!</p>
+      </div>
+      <div class="content-grid">
+        <div class="text-content">
+          <h3>Monetize Your Traffic with Neon Monetization!</h3>
+          <p>Maximize your earnings with our high-quality ad formats! Whether you have a website, social media traffic, or a mobile app, we offer top-paying monetization solutions. Benefit from higher CPM rates, flexible payment terms, and an optimized user experience. Start earning more today!</p>
+          <a href="{% url "dashboard" %}" class="btn btn-primary">Get Monetized</a>
+        </div>
+        <div class="image-content">
+
+          <img src="{% static "images/pages/publishers-img.webp" %}" alt="chart image" >
+      
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- marquee section -->
+
+  <section class="marquee-section">
+    <div class="marquee-bg">
+      <div class="marquee-track">
+        <div class="marquee-text">
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+          <h4>Let's elevate your advertising strategy.</h4>
+  
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+          <h4>Let's elevate your advertising strategy.</h4>
+  
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+          <h4>Let's elevate your advertising strategy.</h4>
+  
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+          <h4>Let's elevate your advertising strategy.</h4>
+  
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+          <h4>Let's elevate your advertising strategy.</h4>
+        </div>
+        <!-- Duplicate content for seamless effect -->
+        <div class="marquee-text">
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+          <h4>Let's elevate your advertising strategy.</h4>
+  
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+          <h4>Let's elevate your advertising strategy.</h4>
+  
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+          <h4>Let's elevate your advertising strategy.</h4>
+  
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+          <h4>Let's elevate your advertising strategy.</h4>
+  
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+          <h4>Let's elevate your advertising strategy.</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Ad Formats Section -->
+  <section class="ad-formats-section" id="ad-formats">
+    <div class="container">
+      <div class="section-header">
+        <h2>Ad Formats</h2>
+        
+      </div>
+      <div class="tabs">
+        <div class="tab-header">
+          <button class="tab-btn active" data-tab="pop">Pop</button>
+          <button class="tab-btn" data-tab="push">Push</button>
+          <button class="tab-btn" data-tab="in-page">In-Page Push</button>
+          <button class="tab-btn" data-tab="interstitial">Interstitial</button>
+          <button class="tab-btn" data-tab="content-locker">Content Locker</button>
+          <button class="tab-btn" data-tab="smart-link">Smart Link</button>
+          <button class="tab-btn" data-tab="direct-link">Direct link </button>
+        </div>
+
+
+        <div class="tab-content">
+          <div class="tab-pane active" id="pop">
+            <div class="format-grid">
+              
+             <div class="format-info">
+                <h3>Pop Ads</h3>
+                <p>Maximize your earnings with high-converting Popunder, Pop, and NewTab ads.</p>
+                <ul class="feature-list">
+                    <li>Opens in a new tab for a seamless user experience</li>
+                    <li>Works on all devices with a 100% fill rate</li>
+                    <li>Ensures high and stable CPM for maximum revenue</li>
+                    <li>Compatible with AdSense, video ads, banners, and other formats</li>
+                </ul>
+                <a href="{% url 'ad_format' %}" class="btn btn-secondary">Learn More</a>
+             </div>
+
+              <div class="format-image">
+                <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Pop Ad Example" class="format-img">
+              </div>
+            </div>
+          </div>
+
+
+          <div class="tab-pane" id="push">
+            <div class="format-grid">
+              <div class="format-info">
+                <h3>Push Notifications</h3>
+                <p>Engage users and earn passive revenue with fully compliant push ads.</p>
+                <ul class="feature-list">
+                    <li>Works seamlessly alongside other ad formats</li>
+                    <li>Doesn’t occupy space on your website</li>
+                    <li>Generates revenue even from inactive visitors</li>
+                    <li>Requires a one-time subscription approval</li>
+                    <li>Ideal for website owners and affiliates with landing pages</li>
+                </ul>
+                <a href="{% url 'ad_format' %}" class="btn btn-secondary">Learn More</a>
+            </div>
+              <div class="format-image">
+                <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Push Notification Example" class="format-img">
+              </div>
+            </div>
+          </div>
+
+
+          <div class="tab-pane" id="in-page">
+            <div class="format-grid">
+
+              <div class="format-info">
+                <h3>Inpage Push (Floating Banner)</h3>
+                <p>A high-visibility sliding banner that looks like a push notification.</p>
+                <ul class="feature-list">
+                    <li>Engaging ad format that mimics push notifications</li>
+                    <li>Consumes minimal space while maintaining high visibility</li>
+                    <li>Displays like a standard banner—no subscription required</li>
+                    <li>Fully customizable with a user-friendly design</li>
+                    <li>Compatible with all devices and browsers</li>
+                </ul>
+                <a href="{% url 'ad_format' %}" class="btn btn-secondary">Learn More</a>
+            </div>
+
+              <div class="format-image">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="In-Page Push Example" class="format-img">
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane" id="interstitial">
+            <div class="format-grid">
+              <div class="format-info">
+                <h3>Interstitial Ads</h3>
+                <p>High-impact, skippable ads designed for maximum engagement and revenue.</p>
+                <ul class="feature-list">
+                    <li>Skippable format with high user interaction</li>
+                    <li>Delivers high CTR and increased payouts</li>
+                    <li>Overlays website content for better visibility</li>
+                    <li>Optimized for a seamless user experience</li>
+                    <li>Compatible with all devices and other ad formats</li>
+                </ul>
+                <a href="{% url 'ad_format' %}" class="btn btn-secondary">Learn More</a>
+              </div>
+              <div class="format-image">
+                <img src="https://images.unsplash.com/photo-1555421689-491a97ff2040?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Interstitial Ad Example" class="format-img">
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane " id="content-locker">
+            <div class="format-grid">
+              
+              <div class="format-info">
+                <h3>Content Locker / Link Shortener</h3>
+                <p>Monetize exclusive content by restricting access until users complete required actions.</p>
+                <ul class="feature-list">
+                    <li>Locks specific content until tasks are completed</li>
+                    <li>Ideal for social media platforms like YouTube, Telegram, and Twitter</li>
+                    <li>Fully customizable design and content options</li>
+                    <li>Easy integration with minimal setup</li>
+                    <li>Generates high revenue from engaged users</li>
+                </ul>
+                <a href="{% url 'ad_format' %}" class="btn btn-secondary">Learn More</a>
+            </div>
+
+              <div class="format-image">
+                <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Pop Ad Example" class="format-img">
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane" id="smart-link">
+            <div class="format-grid">
+              
+              <div class="format-info">
+                <h3>Smartlink</h3>
+                <p>Monetize all traffic types with a direct URL that delivers the best offers automatically.</p>
+                <ul class="feature-list">
+                    <li>Optimized for all traffic types, including remnant, redirect, and exit traffic</li>
+                    <li>Ensures 100% fill rate for maximum revenue</li>
+                    <li>Intelligent engine selects the highest-converting offers</li>
+                    <li>Simple and flexible monetization solution</li>
+                </ul>
+                <a href="{% url 'ad_format' %}" class="btn btn-secondary">Learn More</a>
+              </div>
+
+              <div class="format-image">
+                <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Pop Ad Example" class="format-img">
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane" id="direct-link">
+            <div class="format-grid">
+              
+              <div class="format-info">
+                <h3>Direct Link</h3>
+                <p>Monetize any clickable element on your website with a high-converting direct URL.</p>
+                <ul class="feature-list">
+                    <li>Attach to any button, image, or text link</li>
+                    <li>Seamlessly integrates with all website assets</li>
+                    <li>Smart engine delivers the best-performing offers</li>
+                    <li>Opens in a new tab or redirects instantly upon click</li>
+                </ul>
+                <a href="{% url 'ad_format' %}" class="btn btn-secondary">Learn More</a>
+             </div>
+
+              <div class="format-image">
+                <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Pop Ad Example" class="format-img">
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Payment Section -->
+  <section class="payment-section">
+    <div class="container">
+      <h2>Payment Methods</h2>
+      <div class="payment-methods">
+        
+          <img  src="{% static "images/methods/master-card.png" %}" alt="Master Card image" >
+        
+          <img src="{% static "images/methods/paypal.png" %}" alt="paypal" >
+        
+          <img src="{% static "images/methods/visa.png" %}" alt="visa" >
+        
+          <img src="{% static "images/methods/bank-transfer.png" %}" alt="Bank Transfer" >
+          <img  src="{% static "images/methods/payoneer.png" %}" alt="Payonerr" >
+        
+          <img src="{% static "images/methods/jazzcash.png" %}" alt="jazzcash" >
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <h2>About Neon Monetization</h2>
+        <p>Our mission is to provide advertisers with great traffic that converts while maximizing revenue for our publishers</p>
+      </div>
+      <div class="about-content">
+        <div class="about-text">
+          <p>Neon Monetization is a leading innovative ad network. Our mission is to provide advertisers with great traffic that converts while maximizing revenue for our publishers.</p>
+          <p>With cutting-edge technology and a dedicated team of experts, we're committed to delivering exceptional results for both advertisers and publishers.</p>
+          <a href="{% url "about_us" %}" class="btn btn-secondary">Get to know us</a>
+        </div>
+        <div class="about-image">
+          <div class="color-blocks">
+            <div class="block block-1"></div>
+            <div class="block block-2"></div>
+            <div class="block block-3"></div>
+            <div class="block block-4"></div>
+          </div>
+          <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Team working together" class="team-img">
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

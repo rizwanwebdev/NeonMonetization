@@ -1,0 +1,550 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<!-- [Head] start -->
+
+<head>
+
+  {% block dash_title %}{% endblock %}
+  <!-- [Meta] -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Get Monetized is a ad network compny with a large number of Publisher and Advertisers.">
+  
+
+  <!-- [Favicon] icon -->
+  {% comment %} <link rel="icon" href="{% static "images/favicon.svg" %}" type="image/x-icon"> {% endcomment %}
+
+
+
+
+<!-- [Template CSS Files] -->
+<link rel="stylesheet" href="{% static "css/dashboard.css" %}" id="main-style-link" >
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+</head>
+<!-- [Head] end -->
+<!-- [Body] Start -->
+
+<body data-pc-preset="preset-1" data-pc-direction="ltr" data-pc-theme="light">
+
+ <!-- [ Sidebar Menu ] start -->
+<nav class="pc-sidebar">
+  <div class="navbar-wrapper">
+    <div class="m-header">
+      <img style="width: 30px; margin-right:5px" src="{% static "images/logo/logo-nm.png" %}" class="img-fluid " alt="logo">
+      <a href="{% url "index" %}" class="b-brand text-primary f-18" 
+      style="font-weight:600;"  >Neon Monetization
+
+        <!-- ========   Change your logo from here   ============ -->
+      
+      </a>
+    </div>
+    <div class="navbar-content">
+      <ul class="pc-navbar">
+        <li class="pc-item">
+          <a href="{% url "dashboard" %}" class="pc-link">
+            <span class="pc-micon"><i  class="fa-brands fa-slack"></i></span>
+            <span style="color: black;" class="pc-mtext "><b>Dashboard</b></span>
+          </a>
+        </li>
+        <li class="pc-item">
+          <a href="/profile/" class="pc-link">
+            <span class="pc-micon"><i class="ti ti-brand-chrome"></i></span>
+            <span class="pc-mtext">Profile</span>
+          </a>
+        </li>
+
+        <li class="pc-item pc-caption">
+          <label>Pages</label>
+        </li>
+        <li class="pc-item">
+          <a href="{% url 'index' %}" target="_blank" class="pc-link">
+            <span class="pc-micon"><i class="fa-solid fa-home"></i></span>
+            <span class="pc-mtext">Home</span>
+          </a>
+        </li>
+        <li class="pc-item">
+          <a href="{% url 'contact' %}" target="_blank" class="pc-link">
+            <span class="pc-micon"><i class="fa-solid fa-address-book"></i></span>
+            <span class="pc-mtext">Contact Us</span>
+          </a>
+        </li>
+        <li class="pc-item">
+          <a href="{% url 'about_us' %}" target="_blank" class="pc-link">
+            <span class="pc-micon"><i class="fa-solid fa-user-tie"></i></i></i></span>
+            <span class="pc-mtext">About Us</span>
+          </a>
+        </li>
+        <li class="pc-item">
+          <a href="#" target="_blank" class="pc-link">
+            <span class="pc-micon"><i class="fa-solid fa-circle-dollar-to-slot"></i></span>
+            <span class="pc-mtext">Affliate</span>
+          </a>
+        </li>
+        <li class="pc-item">
+          <a href="#" class="pc-link">
+            <span class="pc-micon"><i class="fa-solid fa-person-walking"></i></span>
+            <span class="pc-mtext">Hire Me</span>
+          </a>
+        </li>
+
+        <li class="pc-item pc-caption">
+          <label>Other</label>
+          <i class="ti ti-brand-chrome"></i>
+        </li>
+        <div class="card text-center">
+          <div class="card-body">
+            <img style="width: auto; height: 70px;" src="{% static "images/methods/whatsapp.png" %}" alt="images" class="img-fluid mb-2 w-26">
+            <h5>Have a problem?</h5>
+            <p>Click the below button to contact.</p>
+            <a href="http://wa.me/+9212727187" target="_blank"
+            class="btn btn-success">Whatsapp</a>
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</nav>
+<!-- [ Sidebar Menu ] end --> <!-- [ Header Topbar ] start -->
+<header class="pc-header">
+  <div class="header-wrapper"> <!-- [Mobile Media Block] start -->
+<div class="me-auto pc-mob-drp">
+  <ul class="list-unstyled">
+    <!-- ======= Menu collapse Icon ===== -->
+    <li class="pc-h-item pc-sidebar-collapse">
+      <a href="#" class="pc-head-link ms-0" id="sidebar-hide">
+        <i class="fa-solid fa-bars"></i>
+      </a>
+    </li>
+    <li class="pc-h-item pc-sidebar-popup">
+      <a href="#" class="pc-head-link ms-0" id="mobile-collapse">
+        <i class="fa-solid fa-bars "></i>
+      </a>
+    </li>
+    <li class="dropdown pc-h-item d-inline-flex d-md-none">
+      <a
+        class="pc-head-link dropdown-toggle arrow-none m-0"
+        data-bs-toggle="dropdown"
+        href="#"
+        role="button"
+        aria-haspopup="false"
+        aria-expanded="false"
+      >
+      <i class="fa-solid fa-search"></i>
+      </a>
+      <div class="dropdown-menu pc-h-dropdown drp-search">
+        <form class="px-3">
+          <div class="form-group mb-0 d-flex align-items-center">
+            <i data-feather="search"></i>
+            <input type="search" class="form-control border-0 shadow-none" placeholder="Search here. . .">
+          </div>
+        </form>
+      </div>
+    </li>
+    <li class="pc-h-item d-none d-md-inline-flex">
+      <form class="header-search">
+        <i data-feather="search" class="icon-search"></i>
+        <input type="search" class="form-control" placeholder="Search here. . .">
+      </form>
+    </li>
+  </ul>
+</div>
+<!-- [Mobile Media Block end] -->
+ 
+<div class="ms-auto">
+  <ul class="list-unstyled">
+    <li class="dropdown pc-h-item pc-mega-menu">
+      <a
+        class="pc-head-link dropdown-toggle arrow-none me-0"
+        data-bs-toggle="dropdown"
+        href="#"
+        role="button"
+        aria-haspopup="false"
+        aria-expanded="false"
+      >
+      <i class="fa-solid fa-layer-group" ></i>
+      </a>
+      <div class="dropdown-menu pc-h-dropdown pc-mega-dmenu">
+        <div class="row g-0">
+          <div class="col image-block">
+            <h2 class="text-white">Explore Components</h2>
+            <p class="text-white my-4">Try our pre made component pages to check how it feels and suits as per your need.</p>
+            <div class="row align-items-end">
+              <div class="col-auto">
+                <div class="btn btn btn-light">View All <i class="fa-solid fa-arrow-right"></i></div>
+              </div>
+              <div class="col">
+                <img src="{% static "images/user/chart.svg" %}" alt="image" class="img-fluid img-charts">
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <h6 class="mega-title">UI Components</h6>
+            <ul class="pc-mega-list">
+              <li
+                ><a href="#!" class="dropdown-item">&#10022; Alerts</a></li
+              >
+              <li
+                ><a href="#!" class="dropdown-item">&#10022; Accordions</a></li
+              >
+              <li
+                ><a href="#!" class="dropdown-item">&#10022; Avatars</a></li
+              >
+              <li
+                ><a href="#!" class="dropdown-item">&#10022; Badges</a></li
+              >
+              <li
+                ><a href="#!" class="dropdown-item">&#10022; Breadcrumbs</a></li
+              >
+              <li
+                ><a href="#!" class="dropdown-item">&#10022; Button</a></li
+              >
+              <li
+                ><a href="#!" class="dropdown-item">&#10022; Buttons Groups</a></li
+              >
+            </ul>
+          </div>
+          <div class="col">
+            <h6 class="mega-title">UI Components</h6>
+            <ul class="pc-mega-list">
+              <li
+                ><a href="#!" class="dropdown-item">&#10022; Menus</a></li
+              >
+              <li
+                ><a href="#!" class="dropdown-item">&#10022; Media Sliders / Carousel</a></li
+              >
+              <li
+                ><a href="#!" class="dropdown-item">&#10022; Modals</a></li
+              >
+              <li
+                ><a href="#!" class="dropdown-item">&#10022; Pagination</a></li
+              >
+              <li
+                ><a href="#!" class="dropdown-item">&#10022; Progress Bars &amp; Graphs</a></li
+              >
+              <li
+                ><a href="#!" class="dropdown-item">&#10022; Search Bar</a></li
+              >
+              <li
+                ><a href="#!" class="dropdown-item">&#10022; Tabs</a></li
+              >
+            </ul>
+          </div>
+          <div class="col">
+            <h6 class="mega-title">Advance Components</h6>
+            <ul class="pc-mega-list">
+              <li
+                ><a href="#!" class="dropdown-item">&#10022; Advanced Stats</a></li
+              >
+              <li
+                ><a href="#!" class="dropdown-item">&#10022; Advanced Cards</a></li
+              >
+              <li
+                ><a href="#!" class="dropdown-item">&#10022; Lightbox</a></li
+              >
+              <li
+                ><a href="#!" class="dropdown-item">&#10022; Notification</a></li
+              >
+            </ul>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="dropdown pc-h-item">
+      <a
+        class="pc-head-link dropdown-toggle arrow-none me-0"
+        data-bs-toggle="dropdown"
+        href="#"
+        role="button"
+        aria-haspopup="false"
+        aria-expanded="false"
+      >
+      <i class="fa-solid fa-bell"></i>
+        <span style="background-color: #6a85c0;" class="badge  pc-h-badge">3</span>
+      </a>
+      <div class="dropdown-menu dropdown-notification dropdown-menu-end pc-h-dropdown">
+        <div class="dropdown-header d-flex align-items-center justify-content-between">
+          <h5 class="m-0">Notification</h5>
+          <a href="#!" class="pc-head-link bg-transparent"><i class="fa-solid fa-xmark text-success"></i></a>
+        </div>
+        <div class="dropdown-divider"></div>
+        <div class="dropdown-header px-0 text-wrap header-notification-scroll position-relative" style="max-height: calc(100vh - 215px)">
+          <div class="list-group list-group-flush w-100">
+            <a class="list-group-item list-group-item-action">
+              <div class="d-flex">
+                <div class="flex-shrink-0">
+                  <div class="user-avtar bg-light-success"><i class="fa-sharp fa-solid fa-gift"></i></div>
+                </div>
+                <div class="flex-grow-1 ms-1">
+                  <span class="float-end text-muted">3:00 AM</span>
+                  <p class="text-body mb-1">It's <b>Cristina danny's</b> birthday today.</p>
+                  <span class="text-muted">2 min ago</span>
+                </div>
+              </div>
+            </a>
+            <a class="list-group-item list-group-item-action">
+              <div class="d-flex">
+                <div class="flex-shrink-0">
+                  <div class="user-avtar bg-light-primary"><i class="fa-sharp fa-solid fa-comment-dots"></i></div>
+                </div>
+                <div class="flex-grow-1 ms-1">
+                  <span class="float-end text-muted">6:00 PM</span>
+                  <p class="text-body mb-1"><b>Aida Burg</b> commented your post.</p>
+                  <span class="text-muted">5 August</span>
+                </div>
+              </div>
+            </a>
+            <a class="list-group-item list-group-item-action">
+              <div class="d-flex">
+                <div class="flex-shrink-0">
+                  <div class="user-avtar bg-light-danger"><i class="fa-sharp fa-solid fa-gear"></i></div>
+                </div>
+                <div class="flex-grow-1 ms-1">
+                  <span class="float-end text-muted">2:45 PM</span>
+                  <p class="text-body mb-1">Your Profile is Complete &nbsp;<b>60%</b></p>
+                  <span class="text-muted">7 hours ago</span>
+                </div>
+              </div>
+            </a>
+            <a class="list-group-item list-group-item-action">
+              <div class="d-flex">
+                <div class="flex-shrink-0">
+                  <div class="user-avtar bg-light-primary"><i class="fa-sharp fa-solid fa-headset"></i></div>
+                </div>
+                <div class="flex-grow-1 ms-1">
+                  <span class="float-end text-muted">9:10 PM</span>
+                  <p class="text-body mb-1"><b>Cristina Danny </b> invited to join <b> Meeting.</b></p>
+                  <span class="text-muted">Daily scrum meeting time</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="dropdown-divider"></div>
+        <div class="text-center py-2">
+          <a href="#!" class="link-primary">View all</a>
+        </div>
+      </div>
+    </li>
+    <li class="dropdown pc-h-item">
+      <a
+        class="pc-head-link dropdown-toggle arrow-none me-0"
+        data-bs-toggle="dropdown"
+        href="#"
+        role="button"
+        aria-haspopup="false"
+        aria-expanded="false"
+      >
+      <i class="fa-solid fa-envelope"></i>
+      </a>
+      <div class="dropdown-menu dropdown-notification dropdown-menu-end pc-h-dropdown">
+        <div class="dropdown-header d-flex align-items-center justify-content-between">
+          <h5 class="m-0">Message</h5>
+          <a href="#!" class="pc-head-link bg-transparent"><i class="fa-solid fa-xmark" style="color:var(--bs-danger);"></i></a>
+        </div>
+        <div class="dropdown-divider"></div>
+        <div class="dropdown-header px-0 text-wrap header-notification-scroll position-relative" style="max-height: calc(100vh - 215px)">
+          <div class="list-group list-group-flush w-100">
+            <a class="list-group-item list-group-item-action">
+              <div class="d-flex">
+                <div class="flex-shrink-0">
+                  <img src="{% static "images/user/avatar-2.jpg" %}" alt="user-image" class="user-avtar">
+                </div>
+                <div class="flex-grow-1 ms-1">
+                  <span class="float-end text-muted">3:00 AM</span>
+                  <p class="text-body mb-1">It's <b>Cristina danny's</b> birthday today.</p>
+                  <span class="text-muted">2 min ago</span>
+                </div>
+              </div>
+            </a>
+            <a class="list-group-item list-group-item-action">
+              <div class="d-flex">
+                <div class="flex-shrink-0">
+                  <img src="{% static "images/user/avatar-1.jpg" %}" alt="user-image" class="user-avtar">
+                </div>
+                <div class="flex-grow-1 ms-1">
+                  <span class="float-end text-muted">6:00 PM</span>
+                  <p class="text-body mb-1"><b>Aida Burg</b> commented your post.</p>
+                  <span class="text-muted">5 August</span>
+                </div>
+              </div>
+            </a>
+            <a class="list-group-item list-group-item-action">
+              <div class="d-flex">
+                <div class="flex-shrink-0">
+                  <img src="{% static "images/user/avatar-3.jpg" %}" alt="user-image" class="user-avtar">
+                </div>
+                <div class="flex-grow-1 ms-1">
+                  <span class="float-end text-muted">2:45 PM</span>
+                  <p class="text-body mb-1"><b>There was a failure to your setup.</b></p>
+                  <span class="text-muted">7 hours ago</span>
+                </div>
+              </div>
+            </a>
+            <a class="list-group-item list-group-item-action">
+              <div class="d-flex">
+                <div class="flex-shrink-0">
+                  <img src="{% static "images/user/avatar-4.jpg" %}" alt="user-image" class="user-avtar">
+                </div>
+                <div class="flex-grow-1 ms-1">
+                  <span class="float-end text-muted">9:10 PM</span>
+                  <p class="text-body mb-1"><b>Cristina Danny </b> invited to join <b> Meeting.</b></p>
+                  <span class="text-muted">Daily scrum meeting time</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="dropdown-divider"></div>
+        <div class="text-center py-2">
+          <a href="#!" class="link-primary">View all</a>
+        </div>
+      </div>
+    </li>
+    <li class="dropdown pc-h-item header-user-profile">
+      <a
+        class="pc-head-link dropdown-toggle arrow-none me-0"
+        data-bs-toggle="dropdown"
+        href="#"
+        role="button"
+        aria-haspopup="false"
+        data-bs-auto-close="outside"
+        aria-expanded="false"
+      >
+        <img src="{% static "images/user/avatar-2.jpg" %}" alt="user-image" class="user-avtar">
+        <span>{{ user.username }}</span>
+      </a>
+      <div class="dropdown-menu dropdown-user-profile dropdown-menu-end pc-h-dropdown">
+        <div class="dropdown-header">
+          <div class="d-flex mb-1">
+            <div class="flex-shrink-0">
+              <img src="{% static "images/user/avatar-2.jpg" %}" alt="user-image" class="user-avtar wid-35">
+            </div>
+            <div class="flex-grow-1 ms-3">
+              <h6 class="mb-1">{{ user.username }}</h6>
+              <span>UI/UX Designer</span>
+            </div>
+            <a href="{% url "user_logout" %}" class="pc-head-link bg-transparent"><i class="fa-solid fa-power-off text-danger"></i></a> 
+          </div>
+        </div>
+        <ul class="nav drp-tabs nav-fill nav-tabs" id="mydrpTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active"
+              id="drp-t1"
+              data-bs-toggle="tab"
+              data-bs-target="#drp-tab-1"
+              type="button"
+              role="tab"
+              aria-controls="drp-tab-1"
+              aria-selected="true"
+              ><i class="fa-regular fa-user"> </i>Profile</button
+            >
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="drp-t2"
+              data-bs-toggle="tab"
+              data-bs-target="#drp-tab-2"
+              type="button"
+              role="tab"
+              aria-controls="drp-tab-2"
+              aria-selected="false"
+              ><i class="fa-solid fa-gears"></i> Setting</button
+            >
+          </li>
+        </ul>
+        <div class="tab-content" id="mysrpTabContent">
+          <div class="tab-pane fade show active" id="drp-tab-1" role="tabpanel" aria-labelledby="drp-t1" tabindex="0">
+            <a href="/profile/" class="dropdown-item">
+              <i class="fa-solid fa-pen-to-square"></i>
+              <span>Edit Profile</span>
+            </a>
+            <a href="/profile/" class="dropdown-item">
+              <i class="fa-regular fa-user"> </i>
+              <span>View Profile</span>
+            </a>
+            
+            <a href="#!" class="dropdown-item">
+              <i class="fa-solid fa-wallet"></i>
+              <span>Billing</span>
+            </a>
+            <a href="{% url "user_logout" %}" class="dropdown-item">
+              <i class="fa-solid fa-arrow-right-from-bracket"></i>
+              <span>Logout</span>
+            </a>
+          </div>
+          <div class="tab-pane fade" id="drp-tab-2" role="tabpanel" aria-labelledby="drp-t2" tabindex="0">
+            <a href="{% url "support" %}" class="dropdown-item">
+              <i class="fa-solid fa-headset"></i>
+              <span>Support</span>
+            </a>
+            <a href="/profile/" class="dropdown-item">
+              <i class="fa-solid fa-gear"></i>
+              <span>Account Settings</span>
+            </a>
+            <a href="{% url "privacy_policy" %}" class="dropdown-item">
+              <i class="fa-solid fa-shield-halved"></i>
+              <span>Privacy Center</span>
+            </a>
+            <a href="#!" class="dropdown-item">
+              <i class="fa-solid fa-comment-dots"></i>
+              <span>Feedback</span>
+            </a>
+            <a href="#!" class="dropdown-item">
+              <i class="fa-solid fa-calender"></i>
+              <span>History</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+ </div>
+</header>
+<!-- [ Header ] end -->
+
+{% block dashboard_content %}
+
+{% endblock %}
+
+
+  <!-- [ Main Content ] end -->
+  <footer class="pc-footer">
+    <div class="footer-wrapper container-fluid">
+      <div class="row">
+        <div class="col-sm my-1">
+          <p class="m-0"
+            >© All Rights Reserved | <a href="{% url "index" %}" target="_blank">Neon Monetization</a> </p
+          >
+        </div>
+        <div class="col-auto my-1">
+          <ul class="list-inline footer-link mb-0">
+            <li class="list-inline-item"><a href="{% url 'index' %}">Home</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  
+  <!-- Required Js -->
+  <script src="{% static "js/plugins/popper.min.js" %}"></script>
+  <script src="{% static "js/plugins/simplebar.min.js" %}"></script>
+  <script src="{% static "js/plugins/bootstrap.min.js" %}"></script>
+  <script src="{% static "js/dashboard.js" %}"></script>
+  <script src="{% static "js/plugins/feather.min.js" %}"></script>
+
+  
+</body>
+<!-- [Body] end -->
+
+</html>

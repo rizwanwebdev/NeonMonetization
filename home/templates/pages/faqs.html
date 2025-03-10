@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+  <section class="faqs-section">
+        <div class="container">
+            <div class="section-header section-img-head">
+                <h1 class="section-title">FAQ's</h1>
+                <p>If you have anyother question, <a href="{% url "contact" %}">contact us.</a></p>
+                <div class="section-img">
+                    <img src="{% static "images/pages/faqs.svg" %}" alt="" srcset="">
+                </div>
+              </div>
+            <div class="faq-container">
+                <h2>Frequently Asked Questions (FAQs)</h2>
+                
+                <details>
+                    <summary>What is Neon Monetization?</summary>
+                    <div class="faq-content">
+                        <p>Neon Monetization is an advanced advertising platform connecting advertisers and publishers, offering high revenue share, seamless ad delivery, and on-time withdrawals.</p>
+                    </div>
+                </details>
+        
+                <details>
+                    <summary>How do I sign up as a publisher or advertiser?</summary>
+                    <div class="faq-content">
+                        <p>Visit <a href="https://neonmonetization.com">neonmonetization.com</a> and click on Sign Up. Complete the registration, and once approved, you can start monetizing or advertising immediately.</p>
+                    </div>
+                </details>
+        
+                <details>
+                    <summary>When will I receive my earnings?</summary>
+                    <div class="faq-content">
+                        <p>Your withdrawals are processed automatically in the first week of every month. No manual requests are needed.</p>
+                    </div>
+                </details>
+        
+                <details>
+                    <summary>What payment methods do you support?</summary>
+                    <div class="faq-content">
+                        <p>We support PayPal, Bank Transfer, and Cryptocurrency payments (subject to availability).</p>
+                    </div>
+                </details>
+        
+                <details>
+                    <summary>What are the minimum withdrawal requirements?</summary>
+                    <div class="faq-content">
+                        <p>The minimum withdrawal threshold varies by payment method. Please check your dashboard for specific details.</p>
+                    </div>
+                </details>
+        
+                <details>
+                    <summary>How do I contact support?</summary>
+                    <div class="faq-content">
+                        <p>For quick assistance, contact our Senior Support Manager, M Rizwan, via WhatsApp. He typically replies within a minute.</p>
+                    </div>
+                </details>
+        
+                <details>
+                    <summary>What kind of ads does Neon Monetization offer?</summary>
+                    <div class="faq-content">
+                        <p>We offer banner ads, pop ads, native ads, push notifications, and more for optimal performance.</p>
+                    </div>
+                </details>
+        
+                <details>
+                    <summary>Are there any restrictions for publishers?</summary>
+                    <div class="faq-content">
+                        <p>Yes, we do not accept sites with illegal, adult, or fraudulent content. Violations may result in account suspension.</p>
+                    </div>
+                </details>
+        
+                <details>
+                    <summary>Can advertisers target specific audiences?</summary>
+                    <div class="faq-content">
+                        <p>Yes! Our platform offers advanced targeting options, including geo-targeting, device targeting, and audience segmentation.</p>
+                    </div>
+                </details>
+        
+                <details>
+                    <summary>What happens if I engage in fraudulent activities?</summary>
+                    <div class="faq-content">
+                        <p>Fraudulent clicks, fake traffic, or any violations will lead to account suspension and earnings forfeiture.</p>
+                    </div>
+                </details>
+        
+                <details>
+                    <summary>Can I run Neon Monetization ads alongside AdSense or other networks?</summary>
+                    <div class="faq-content">
+                        <p>Yes, as long as it complies with the policies of other ad networks.</p>
+                    </div>
+                </details>
+        
+                <details>
+                    <summary>How can I maximize my revenue as a publisher?</summary>
+                    <div class="faq-content">
+                        <p>To increase earnings, use high-performing ad formats, optimize ad placements, and drive genuine traffic to your site.</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

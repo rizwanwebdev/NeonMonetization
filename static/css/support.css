@@ -1,0 +1,246 @@
+:root{
+  --primary-color: #7c3aed;
+  --primary-light: #a78bfa;
+  --primary-dark: #5b21b6;
+  --secondary-color: #10b981;
+  --text-color: #1f2937;
+  --text-light: #6b7280;
+  --text-white:#fff;
+  --background-color: #ffffff;
+  --background-light: #f9fafb;
+  --background-dark: #f3f4f6;
+  --border-color: #e5e7eb;
+}
+.search-container{
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 1.5rem;
+  margin: 50px auto;
+}
+section{
+  margin-bottom: 20px;
+}
+
+.search {
+  padding: 40px 50px;
+  max-width: 700px;
+  margin-left: 70px;
+  border-radius: 5px;
+  background-color: var(--background-dark);
+  text-align: left;
+  text-align: center;
+
+  
+}
+@media (max-width: 768px) {
+  .search {
+    max-width: unset;
+    margin-left: 0;
+    border-radius: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+@media (max-width: 810px) {
+  .search {
+    max-width: unset;
+    margin-left: 0;
+  }
+  .search-input{
+    padding: 18px 18px 18px 50px;
+    font-size: 16px;
+    background-color: red;
+
+  }
+}
+.search-title {
+  margin: 0;
+  color: var(--text-color);
+  font-weight: 400;
+  font-size: 36px;
+  text-align: left;
+}
+.search-form {
+  position: relative;
+  margin-top: 25px;
+}
+.search-input {
+  width: 100%;
+  padding: 25px 25px 25px 70px;
+  border-radius: 5px;
+  border: solid 1px #454564;
+  background-color: var(--text-color);
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--text-white);
+}
+.search-input:focus {
+  outline: none;
+  border-color: var(--primary-dark);
+  transition: border-color 250ms;
+}
+.search-input::placeholder {
+  color: inherit;
+}
+.search-icon {
+  position: absolute;
+  z-index: 2;
+  left: 25px;
+  top: 50%;
+  width: 22px;
+  height: 22px;
+  margin-top: -11px;
+  fill: var(--text-white);
+}
+.main {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 70px;
+}
+@media (max-width: 768px) {
+  .main {
+    margin-top: 0;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
+.menu {
+  width: 280px;
+  padding: 30px;
+  margin-right: 30px;
+  background-color: var(--background-dark);
+  border-radius: 10px;
+
+}
+@media (max-width: 768px) {
+  .menu {
+    width: 100%;
+    margin-right: 0;
+    border-radius: 0;
+  }
+}
+.menu-title {
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--text-color);
+}
+.menu-links {
+  margin-top: 20px;
+  padding-bottom: 25px;
+  border-bottom: 2px solid #141428;
+}
+.menu-link {
+  display: block;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  color: #786cd5;
+  font-size: 16px;
+  text-decoration: none;
+}
+.menu-link:hover {
+  color: var(--primary-dark);
+  transition: color 250ms;
+}
+.support {
+  margin-top: 25px;
+}
+.support-title {
+  color: var(--text-light);
+  font-size: 18px;
+}
+.support-text {
+  margin-top: 15px;
+  color: var(--text-light);
+  font-size: 16px;
+  line-height: 22px;
+}
+.support-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  height: 56px;
+  border-radius: 5px;
+  background-color: var(--primary-light);
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--text-white);
+}
+.support-button:hover{
+  background-color: var(--primary-dark);
+}
+.content {
+  width: 100%;
+  max-width: 68%;
+}
+@media (max-width: 768px) {
+  .content {
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+.content-item {
+  position: relative;
+  padding: 30px;
+  margin-top: 10px;
+  background-color: var(--background-dark);
+}
+.content-item:first-child {
+  margin-top: 0;
+}
+@media (max-width: 768px) {
+  .content-item {
+    margin-top: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  
+}
+@media (min-width:768px) {
+  .content-title{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+}
+.content-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--text-color);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+}
+.content-title .badge {
+  margin-left: 15px;
+}
+.content-description {
+  max-width: 545px;
+  margin-top: 20px;
+  line-height: 22px;
+  font-size: 16px;
+  color: var(--text-light);
+}
+.badge {
+  padding: 8px 18px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+}
+a .badge-primary {
+  color: var(--text-white);
+  background-color: var(--secondary-color);
+}
+.badge-secondary {
+  color: var(--text-white );
+  background-color: var(--primary-light);
+  
+}

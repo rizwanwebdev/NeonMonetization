@@ -1,0 +1,44 @@
+{% extends "base.html" %} {% load static %} {% block page_title %}
+<title>Affiliate | Neon Monetization</title>
+{% endblock %} {% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/affiliate.css' %}" />
+{% endblock %} {% block content %}
+
+<div class="counter-wraper">
+  <div class="counter-container">
+    <h1 class="section-title">Affiliate Program - Coming Soon!</h1>
+    <p>
+      We're working hard to bring you the best affiliate experience. Stay tuned!
+    </p>
+
+    <div class="countdown" id="countdown">
+      Launching in: <span id="timer"></span>
+    </div>
+
+    <div class="subscribe-container">
+      <!-- Error message for invalid email -->
+      <div id="error-message" class="error-message">
+        Please enter a valid email.
+      </div>
+      <input
+        type="email"
+        class="input-field"
+        id="email"
+        placeholder="Enter your email for updates"
+        required
+      />
+      <button class="subscribe-btn" onclick="subscribe()">Notify Me!</button>
+    </div>
+
+    <!-- Thank You message (hidden by default) -->
+    <div id="thank-you" class="thank-you-message">
+      Thank you for subscribing! We'll notify you at
+      <span id="thank-you-email"></span> when the program launches.
+    </div>
+  </div>
+</div>
+
+{% endblock %} {% block extra_js %}
+<script src="{% static 'js/affiliate.js' %}"></script>
+
+{% endblock %}

@@ -1,0 +1,161 @@
+{% extends "dashlayout.html" %}
+{% load static %}
+
+{% block dash_title %}
+<title>Dashboard | Neon Monetization</title>
+{% endblock %}
+
+{% block dashboard_content %}
+
+  <!-- [ Main Content ] start -->
+  <div class="pc-container">
+    <div class="pc-content">
+      <!-- [ breadcrumb ] start -->
+      <div class="page-header">
+        <div class="page-block">
+          <div class="row align-items-center">
+            <div class="col-md-12">
+              <div class="page-header-title text-center" >
+                {% comment %} <h2 class="mb-0">Overview</h2> {% endcomment %}
+
+                <div style="padding: 5px 8px; border: 1px solid #b8c0c9; border-radius: 5px;">
+
+                
+                <a  href="https://{{ user_balance.website_name }}" target="_blank"><h5 class="m-b-10" style="color: rgb(82, 52, 124);"> {{ user_balance.website_name }} <i class="fa-sharp fa-solid fa-up-right-from-square fa-sm"></i></h5></a></div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+ 
+      <!-- [ breadcrumb ] end -->
+      <!-- [ Main Content ] start -->
+      <div class="row">
+        <!-- [ sample-page ] start -->
+        <div class="col-md-6 col-xl-3">
+          <div class="card">
+            <div class="card-body text-center">
+              <h6 class="mb-2 f-w-400 text-muted">Today' Balance</h6>
+              <hr>
+              <h4 class="mb-3 f-28 badge bg-light-primary border border-primary ">${{ user_balance.today_balance }}</h4>
+              <p class="mb-0 text-muted text-sm">This is your <span class="text-primary">Today's</span> balance.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-xl-3">
+          <div class="card">
+            <div class="card-body text-center">
+              <h6 class="mb-2 f-w-400 text-muted">This Week's Balnce</h6>
+              <hr>
+              <h4 class="mb-3 f-28 badge bg-light-success border border-success" style="color: #333;">${{ user_balance.this_week_balance }}</h4>
+              <p class="mb-0 text-muted text-sm">You made this amount this<span class="text-primary">Week</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-xl-3">
+          <div class="card">
+            <div class="card-body text-center">
+              <h6 class="mb-2 f-w-400 text-muted">This Month's Balnce</h6>
+              <hr>
+              <h4 class="mb-3 f-28 badge bg-light-warning border border-warning">${{ user_balance.this_month_balance }}</h4>
+              <p class="mb-0 text-muted text-sm">You made this balance in <span class="text-primary"> {{ user_balance.month }}</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-xl-3">
+          <div class="card">
+            <div class="card-body text-center">
+              <h6 class="mb-2 f-w-400 text-muted">Total Balance</h6>
+              <hr>
+              <h4 class="mb-3 f-28 badge bg-light-danger border border-danger">${{ user_balance.total_balance }} </h4>
+              <p class="mb-0 text-muted text-sm">This is your this <span class="text-primary">Total </span>balance.
+              </p>
+            </div>
+          </div>
+        </div>
+
+       
+    <!-- ==========Balance History============ -->
+
+      
+       
+<!-- ============Transaction History=============== -->
+       
+        <div class="col-md-12 col-xl-12" >
+          <h5 class="mb-3">Transaction History</h5>
+          <div class="card">
+            <div class="list-group list-group-flush">
+
+
+              {% for withdraw in user_withdraws %}
+              <div  class="list-group-item list-group-item-action">
+                <div class="d-flex">
+                  <div class="flex-shrink-0">
+                     <div class="avtar avtar-s rounded-circle text-primary bg-light-primary">
+                      <i class="fa-sharp fa-solid fa-gift fa-lg"></i>
+                    </div>
+                  </div>
+                  <div class="flex-grow-1 ms-3">
+                    <h6 class="mb-1">{{ withdraw.withdraw_number }}</h6>
+                    <p class="mb-0 text-muted"><td>{{ withdraw.date_time }}</td></P>
+                  </div>
+                  <div class="flex-shrink-0 text-end">
+                    <h6 class="mb-1">{{ withdraw.withdraw_amount }}</h6>
+                    <p class="mb-0 text-muted"><td>{{ withdraw.withdraw_method }}</td>
+                    </P>
+                  </div>
+                </div>
+              </div>
+              {% empty %}
+              
+              <div  class="list-group-item list-group-item-action">
+                <div class="d-flex">
+                  <div class="flex-shrink-0">
+                    <div class="avtar avtar-s rounded-circle text-primary bg-light-primary">
+                      <i class="fa-sharp fa-solid fa-gift fa-lg"></i>
+                    </div>
+                  </div>
+                  <div class="flex-grow-1 ms-3">
+                    <h6 class="mb-1">No Withdrawal Yet!!</h6>
+                    <p class="mb-0 text-muted">{{ today_date }}</P>
+                  </div>
+                  <div class="flex-shrink-0 text-end">
+                    <h6 class="mb-1">$00.0</h6>
+                    <p class="mb-0 text-muted">No Method</P>
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      <!-- ======Help & Support Chat=========== -->
+        <div class="card col-md-12 col-auto">
+          <div class="card-body">
+            <div class="row justify-content-between">
+              <div class="col-auto">
+                <h5>Help & Support Chat</h5>
+                <p class="mb-3">Typical replay within 5 min</p>
+              </div>
+              <div class="col-auto">
+                <div class="user-group mb-3">
+                  <img src="{% static "images/user/avatar-1.jpg" %}" alt="image">
+                  <img src="{% static "images/user/avatar-2.jpg" %}" alt="image">
+                  <img src="{% static "images/user/avatar-3.jpg" %}" alt="image">
+                </div>
+              </div>
+            </div>
+            <div class="d-grid">
+              <a style="color: #fff;" href="http://wa.me/+923212727187" target="_blank" ><div class="btn btn-primary">Need Help?</div></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+{% endblock %}
